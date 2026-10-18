@@ -2,7 +2,7 @@
   "Author": "xRopers",
   "Name": "TargetLock",
   "Punchline": "The game's lock-on, without the backpedalling.",
-  "Description": "Use the game's own lock-on camera exactly as normal, but move like you aren't locked on: run and turn in any direction at full speed instead of being forced to face the target, strafe and slowly backpedal.\n\nOnly your movement changes. The lock-on camera, framing and target switching are the game's own.\n\nCommands: /targetlock (settings), /targetlock on|off",
+  "Description": "Use the game's own lock-on camera exactly as normal, but move like you aren't locked on: run and turn in any direction at full speed instead of being forced to face the target, strafe and slowly backpedal.\n\nOnly your movement changes. The lock-on camera, framing and target switching are the game's own.\n\nCommands: /targetlock (settings), /targetlock on|off\n\nThe plugin icon was created with AI assistance.",
   "RepoUrl": "https://github.com/xRopers/TargetLock",
   "IconUrl": "https://raw.githubusercontent.com/xRopers/TargetLock/main/images/icon.png",
   "ApplicableVersion": "any",
