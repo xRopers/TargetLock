@@ -1,0 +1,30 @@
+[
+  {
+    "Author": "xRopers",
+    "Name": "TargetLock",
+    "InternalName": "TargetLock",
+    "AssemblyVersion": "0.1.0.0",
+    "Description": "Use the game's own lock-on camera exactly as normal, but move like you aren't locked on: run and turn in any direction at full speed instead of being forced to face the target, strafe and slowly backpedal.\n\nOnly your movement changes. The lock-on camera, framing and target switching are the game's own.\n\nCommands: /targetlock (settings), /targetlock on|off",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/xRopers/TargetLock",
+    "IconUrl": "https://raw.githubusercontent.com/xRopers/TargetLock/main/images/icon.png",
+    "Tags": [
+      "lock-on",
+      "target",
+      "movement",
+      "camera",
+      "backpedal"
+    ],
+    "DalamudApiLevel": 15,
+    "Punchline": "The game's lock-on, without the backpedalling.",
+    "LoadPriority": 0,
+    "AcceptsFeedback": true,
+    "TestingAssemblyVersion": null,
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkInstall": "https://github.com/xRopers/TargetLock/releases/download/v0.1.0/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/xRopers/TargetLock/releases/download/v0.1.0/latest.zip",
+    "DownloadLinkTesting": "https://github.com/xRopers/TargetLock/releases/download/v0.1.0/latest.zip",
+    "LastUpdate": "1792334156"
+  }
+]
