@@ -2,8 +2,9 @@ using System;
 using Dalamud.Hooking;
 using Dalamud.Plugin.Services;
 using FFXIVClientStructs.FFXIV.Client.Game.Control;
+using TargetLock.Game;
 
-namespace TargetLock;
+namespace TargetLock.Services;
 
 /// <summary>
 /// Keeps the game's own lock-on camera but removes its backpedalling.

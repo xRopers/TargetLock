@@ -29,6 +29,33 @@ The game asks one TargetSystem function whether lock-on is active. The camera us
 
 The lock-on check is located through [FFXIVClientStructs](https://github.com/aers/FFXIVClientStructs), which Dalamud updates for each game patch: it is the function called by `Camera.DetermineControlMode` that reads `TargetSystem.SoftTarget` and `TargetSystem.Target` at ClientStructs' current offsets, with a byte signature as fallback. The movement update isn't in ClientStructs yet, so it is found by a signature with all offsets wildcarded. The settings window shows how each was found.
 
+## Building
+
+Requirements:
+
+- [.NET 10 SDK](https://dotnet.microsoft.com/download)
+- XIVLauncher with Dalamud installed and run at least once, so the development files exist in `%AppData%\XIVLauncher\addon\Hooks\dev\`. Set the `DALAMUD_HOME` environment variable to build against Dalamud somewhere else.
+
+```
+dotnet build TargetLock.sln -c Release
+```
+
+The build writes `TargetLock/bin/x64/Release/TargetLock.dll` with its manifest, plus a packaged `TargetLock/bin/x64/Release/TargetLock/latest.zip`. To load your own build, add the full path to the DLL under Dev Plugin Locations in `/xlsettings` → **Experimental**.
+
+## Project layout
+
+```
+TargetLock/
+  Plugin.cs                       Entry point: Dalamud services, settings window and /targetlock
+  Configuration.cs                Saved settings
+  Game/LockOnCheckResolver.cs     Finds the game's lock-on check through ClientStructs
+  Services/GameLockOnMovement.cs  The hooks that remove the lock-on backpedal
+  Windows/ConfigWindow.cs         Settings window
+images/                           Plugin icon (referenced by the manifest's IconUrl)
+scripts/                          Icon generator and the repo.json updater used by the release workflow
+repo.json                         Custom plugin repository feed
+```
+
 ## Releasing
 
 Push a version tag. The [Release workflow](.github/workflows/release.yml) builds the plugin, publishes `latest.zip` as a GitHub release and updates `repo.json` on `main`:

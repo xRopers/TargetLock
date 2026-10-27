@@ -2,7 +2,7 @@ using System;
 using System.Runtime.InteropServices;
 using FFXIVClientStructs.FFXIV.Client.Game.Control;
 
-namespace TargetLock;
+namespace TargetLock.Game;
 
 /// <summary>
 /// Finds the TargetSystem "is lock-on active" function through ClientStructs, which Dalamud updates for each game

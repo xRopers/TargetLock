@@ -2,7 +2,7 @@ using System.Numerics;
 using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Windowing;
 
-namespace TargetLock;
+namespace TargetLock.Windows;
 
 public sealed class ConfigWindow : Window
 {

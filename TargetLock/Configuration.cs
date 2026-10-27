@@ -10,7 +10,7 @@ public class Configuration : IPluginConfiguration
 
     /// <summary>
     /// Use the game's own lock-on, but move normally: no forced facing, strafing or backpedalling.
-    /// See <see cref="GameLockOnMovement"/>.
+    /// See <see cref="Services.GameLockOnMovement"/>.
     /// </summary>
     public bool NoBackpedalOnGameLockOn { get; set; } = true;
 
